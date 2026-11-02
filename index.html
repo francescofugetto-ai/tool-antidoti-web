@@ -262,7 +262,7 @@ html.js.motore-ko #nomotore{display:block}
   <p class="lede"><strong>Come si usa.</strong> Il passo 1 dice che cosa prende il paziente, il passo 2 quanto è grave il sanguinamento, il passo 3 i dati che servono alla dose: peso, INR, dose e ora dell'ultima compressa, eparina da neutralizzare. Per ogni farmaco escono l'antidoto, la dose e da dove viene. La linea guida ne parla nel <strong>Supplementary data (p. 27–28)</strong>, senza classi di raccomandazione; le dosi che la fonte non scrive vengono dalle <strong>schede tecniche</strong>, e dove le due non coincidono lo strumento lo dice. <strong>Azzera</strong>, in alto, ricomincia.</p>
   <div class="meta-row">
     <span class="meta-chip"><strong>Fonte</strong> 2023 ESC Guidelines for the management of acute coronary syndromes, Supplementary data, sezione 12.1.3</span>
-    <span class="meta-chip"><strong>Dosi</strong> Suppl., p. 27–28 · schede tecniche di Praxbind, Ondexxya, Confidex, Konakion, protamina LEO, FEIBA, NovoSeven</span>
+    <span class="meta-chip"><strong>Dosi</strong> Suppl., p. 27–28 · schede tecniche di idarucizumab, andexanet alfa, CCP a 4 fattori, fitomenadione, protamina, CCP attivato, eptacog alfa</span>
   </div>
 </header>
 
@@ -328,7 +328,7 @@ html.js.motore-ko #nomotore{display:block}
 <div class="card"><h3>Limiti per questo paziente</h3><ul class="lista" id="limiti"></ul></div>
 
 <div class="foot">
-  <strong>Fonte.</strong> Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. <em>Eur Heart J</em> 2023;44:3720–3826, doi:10.1093/eurheartj/ehad191 — Supplementary data, sezione 12.1.3 (sanguinamento con antiaggreganti, AVK e NOAC, p. 27; cardiochirurgia e GP IIb/IIIa, p. 28). <strong>Schede tecniche</strong>, lette fra il 1° e il 2 ottobre 2026: Praxbind (idarucizumab, EMA), Ondexxya (andexanet alfa, EMA, autorizzazione condizionata), Confidex (complesso protrombinico a 4 fattori, AIFA), Konakion (fitomenadione, AIFA), protamina solfato LEO Pharma (AIFA), FEIBA (AIFA), NovoSeven (eptacog alfa, EMA). Ogni numero mostrato porta la sua provenienza.<br><br>
+  <strong>Fonte.</strong> Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. <em>Eur Heart J</em> 2023;44:3720–3826, doi:10.1093/eurheartj/ehad191 — Supplementary data, sezione 12.1.3 (sanguinamento con antiaggreganti, AVK e NOAC, p. 27; cardiochirurgia e GP IIb/IIIa, p. 28). <strong>Schede tecniche</strong>, lette fra il 1° e il 2 ottobre 2026: idarucizumab (EMA), andexanet alfa (EMA, autorizzazione condizionata), complesso protrombinico a 4 fattori (AIFA), fitomenadione (AIFA), protamina solfato (AIFA), complesso protrombinico attivato (AIFA), eptacog alfa (EMA). Ogni numero mostrato porta la sua provenienza.<br><br>
   Strumento personale di studio e consultazione: <strong>non sostituisce il giudizio clinico né la scheda tecnica del farmaco</strong>. Non salva i dati e non li invia in rete.
 </div>
 </div>
@@ -355,20 +355,20 @@ html.js.motore-ko #nomotore{display:block}
        salvataggio. GP IIb/IIIa: piastrine con sanguinamento e piastrine
        <20 000; inefficaci finche' eptifibatide o tirofiban circolano
        (emivita 2 h); fibrinogeno con plasma o crioprecipitato.
-     Schede tecniche: Praxbind (5 g, seconda dose); Ondexxya (dose bassa
+     Schede tecniche: idarucizumab (5 g, seconda dose); andexanet alfa (dose bassa
        400 mg a 30 mg/min + 4 mg/min x 120 min, 5 flaconcini; alta 800 mg +
        8 mg/min x 120 min, 9 flaconcini; apixaban <=5 mg bassa, >5 mg da <8 h
        alta; rivaroxaban <=10 mg bassa, >10 mg da <8 h alta; da >=8 h bassa;
        dose o ora ignote: nessuna raccomandazione; solo apixaban e
-       rivaroxaban); Confidex (AVK: INR 2,0-3,9 25 UI/kg, 4,0-6,0 35, >6,0 50;
+       rivaroxaban); CCP a 4 fattori (AVK: INR 2,0-3,9 25 UI/kg, 4,0-6,0 35, >6,0 50;
        peso fino a 100 kg; non oltre 8 mL/min; nessuna indicazione per i
-       DOAC); Konakion (grave: 5-10 mg e.v. lenta, >=30 s; INR >5 e <9:
+       DOAC); fitomenadione (grave: 5-10 mg e.v. lenta, >=30 s; INR >5 e <9:
        1-2,5 mg per os, 2-5 per correzione rapida; INR >9: 2,5-5 mg per os);
-       protamina LEO (10 mg per ~1400 UI di eparina; per EBPM 10 mg per
+       protamina (10 mg per ~1400 UI di eparina; per EBPM 10 mg per
        1000 UI anti-Xa, parziale; singola iniezione <=50 mg; ridurre se
        >15 min dalla fine dell'eparina e.v.). */
   var CCP_NOAC = 25, APCC = 50, APCC_DIE = 200;                 // Suppl. p. 27
-  var CONF = [[2.0, 25, 2500], [4.0, 35, 3500], [6.0, 50, 5000]];  // Confidex: INR 2,0-3,9 · 4,0-6,0 · >6,0; UI/kg; massimo
+  var CONF = [[2.0, 25, 2500], [4.0, 35, 3500], [6.0, 50, 5000]];  // CCP a 4 fattori: INR 2,0-3,9 · 4,0-6,0 · >6,0; UI/kg; massimo
   var CONF_PESO = 100, PROT_UI = 1400, PROT_ANTIXA = 1000, PROT_MAX = 50, PROT_MIN = 15;
 
   /* ═══ FUNZIONI PURE ═══════════════════════════════════════════════════ */
@@ -414,7 +414,7 @@ html.js.motore-ko #nomotore{display:block}
   function chip(k, t) { return '<span class="cat ' + k + '">' + t + "</span>"; }
   function passo(t, att) { return '<div class="passo' + (att ? " att" : "") + '"><span class="ico">' + (att ? "→" : "·") + '</span><span class="tx">' + t + "</span></div>"; }
   var P27 = "ESC 2023 · Suppl., p. 27", P28 = "ESC 2023 · Suppl., p. 28";
-  var ST = { praxbind:"scheda tecnica Praxbind", ondexxya:"scheda tecnica Ondexxya", confidex:"scheda tecnica Confidex", konakion:"scheda tecnica Konakion", protamina:"scheda tecnica protamina LEO", feiba:"scheda tecnica FEIBA", novoseven:"scheda tecnica NovoSeven" };
+  var ST = { idaru:"scheda tecnica di idarucizumab", andex:"scheda tecnica di andexanet alfa", ccp:"scheda tecnica del CCP a 4 fattori", fito:"scheda tecnica di fitomenadione", protamina:"scheda tecnica di protamina", ccpa:"scheda tecnica del CCP attivato", eptacog:"scheda tecnica di eptacog alfa" };
   var NOMI = { avk:"AVK", dabi:"dabigatran", apix:"apixaban", riva:"rivaroxaban", edox:"edoxaban", ufh:"eparina non frazionata", ebpm:"enoxaparina" };
 
   function S() {
@@ -448,16 +448,16 @@ html.js.motore-ko #nomotore{display:block}
       if (grave || chir) {
         h += '<div class="esito"><span class="big">Vitamina K e un agente rapido</span></div>';
         h += nota("", (chir ? "Intervento d'urgenza: la fonte scrive lo schema per il sanguinamento maggiore, e lo strumento lo applica. " : "") + "Con un sanguinamento maggiore o pericoloso per la vita in AVK va considerata la <b>vitamina K1 insieme a un agente rapido</b>: complesso protrombinico (CCP), plasma fresco congelato o fattore VIIa ricombinante" + pgs(P27) + ".");
-        h += passo("<b>Vitamina K1 5–10 mg e.v. lenta</b>, in almeno 30 secondi, con plasma o CCP; ripetibile" + pgs(ST.konakion) + ". Agisce in 1–3 ore.", true);
+        h += passo("<b>Vitamina K1 5–10 mg e.v. lenta</b>, in almeno 30 secondi, con plasma o CCP; ripetibile" + pgs(ST.fito) + ". Agisce in 1–3 ore.", true);
         if (s.inr === null || s.peso === null) h += '<div class="esito">' + chip("kx", "CCP —") + '<span class="muted">servono ' + (s.inr === null ? "l'INR" : "") + (s.inr === null && s.peso === null ? " e " : "") + (s.peso === null ? "il peso" : "") + "</span></div>";
-        else if (c.sotto) h += passo("CCP: con INR " + nf(s.inr) + " (sotto 2,0) la scheda tecnica non dà una dose: «—»" + pgs(ST.confidex) + ".");
-        else { h += passo("<b>CCP a 4 fattori " + nu(c.ui) + " UI</b> (" + c.uikg + " UI/kg di fattore IX per INR " + nf(s.inr) + (c.tetto ? "; peso contato fino a 100 kg, tetto " + nu(c.ui) + " UI" : "") + "), e.v. non oltre 8 mL/min; dose ripetuta non raccomandata" + pgs(ST.confidex) + ".", true); bD = ["k3", nu(c.ui) + " UI"]; }
+        else if (c.sotto) h += passo("CCP: con INR " + nf(s.inr) + " (sotto 2,0) la scheda tecnica non dà una dose: «—»" + pgs(ST.ccp) + ".");
+        else { h += passo("<b>CCP a 4 fattori " + nu(c.ui) + " UI</b> (" + c.uikg + " UI/kg di fattore IX per INR " + nf(s.inr) + (c.tetto ? "; peso contato fino a 100 kg, tetto " + nu(c.ui) + " UI" : "") + "), e.v. non oltre 8 mL/min; dose ripetuta non raccomandata" + pgs(ST.ccp) + ".", true); bD = ["k3", nu(c.ui) + " UI"]; }
         h += passo("Fattore VIIa ricombinante: la fonte lo elenca, la scheda tecnica non lo autorizza per questo uso (vedi incoerenze).");
         bA = ["k4", "vitamina K + CCP"];
       } else {
         if (s.inr === null) h += '<div class="esito">' + chip("kx", "—") + '<span class="muted">serve l\'INR</span></div>';
-        else if (v.fonte === "si") { h += '<div class="esito"><span class="big">Vitamina K1</span>' + chip("k3", "INR " + nf(s.inr)) + "</div>" + nota("", "INR &gt;10 senza sanguinamento: la vitamina K1 <b>si può usare</b>, il rischio di emorragia può essere alto" + pgs(P27) + ".") + passo("<b>" + v.os + "</b>" + pgs(ST.konakion) + "; negli anziani l'estremo basso.", true); bA = ["k3", "vitamina K per os"]; bD = ["k3", v.os.split(" per")[0]]; }
-        else if (v.fonte === "surrogato") { h += '<div class="esito"><span class="big">Vitamina K1: beneficio non dimostrato</span>' + chip("k3", "INR " + nf(s.inr)) + "</div>" + nota("", "Con INR 4,5–10 senza sanguinamento in corso, quattro studi hanno mostrato soltanto un INR corretto più in fretta, <b>nessun beneficio clinico</b>" + pgs(P27) + "; il rischio di emorragia sale sopra 4,5." + (v.os ? " Se si decide di darla: <b>" + v.os + "</b>" + pgs(ST.konakion) + "." : " Fra 4,5 e 5 la scheda tecnica non dà una dose.")); bA = ["k2", "vitamina K da decidere"]; }
+        else if (v.fonte === "si") { h += '<div class="esito"><span class="big">Vitamina K1</span>' + chip("k3", "INR " + nf(s.inr)) + "</div>" + nota("", "INR &gt;10 senza sanguinamento: la vitamina K1 <b>si può usare</b>, il rischio di emorragia può essere alto" + pgs(P27) + ".") + passo("<b>" + v.os + "</b>" + pgs(ST.fito) + "; negli anziani l'estremo basso.", true); bA = ["k3", "vitamina K per os"]; bD = ["k3", v.os.split(" per")[0]]; }
+        else if (v.fonte === "surrogato") { h += '<div class="esito"><span class="big">Vitamina K1: beneficio non dimostrato</span>' + chip("k3", "INR " + nf(s.inr)) + "</div>" + nota("", "Con INR 4,5–10 senza sanguinamento in corso, quattro studi hanno mostrato soltanto un INR corretto più in fretta, <b>nessun beneficio clinico</b>" + pgs(P27) + "; il rischio di emorragia sale sopra 4,5." + (v.os ? " Se si decide di darla: <b>" + v.os + "</b>" + pgs(ST.fito) + "." : " Fra 4,5 e 5 la scheda tecnica non dà una dose.")); bA = ["k2", "vitamina K da decidere"]; }
         else { h += '<div class="esito"><span class="big">Nessun antidoto</span>' + chip("k1", "INR " + nf(s.inr)) + "</div>" + nota("spenta", "Con INR fino a 4,5 e un sanguinamento minore la fonte non chiede di invertire l'AVK" + pgs(P27) + ": si cura la sede e si rivaluta la dose."); bA = ["k1", "nessuno"]; }
       }
     }
@@ -470,8 +470,8 @@ html.js.motore-ko #nomotore{display:block}
         bA = ["k1", "nessuno"];
       } else if (s.ac === "dabi") {
         h += '<div class="esito"><span class="big">Idarucizumab 5 g e.v.</span>' + chip("k4", "prima linea") + "</div>";
-        h += passo("<b>5 g</b> (due flaconcini da 2,5 g/50 mL), due infusioni consecutive di 5–10 minuti o in bolo" + pgs(P27 + "; " + ST.praxbind) + ". Rene: nessun aggiustamento" + pgs(ST.praxbind) + ".", true);
-        h += passo("Una <b>seconda dose da 5 g</b> se il sanguinamento recidiva con tempi di coagulazione ancora prolungati, o per un secondo intervento d'urgenza" + pgs(ST.praxbind) + ".");
+        h += passo("<b>5 g</b> (due flaconcini da 2,5 g/50 mL), due infusioni consecutive di 5–10 minuti o in bolo" + pgs(P27 + "; " + ST.idaru) + ". Rene: nessun aggiustamento" + pgs(ST.idaru) + ".", true);
+        h += passo("Una <b>seconda dose da 5 g</b> se il sanguinamento recidiva con tempi di coagulazione ancora prolungati, o per un secondo intervento d'urgenza" + pgs(ST.idaru) + ".");
         if (s.peso !== null) h += passo("Se l'idarucizumab non c'è, seconda linea: CCP <b>" + nu(Math.round(CCP_NOAC * s.peso)) + " U</b> (25 U/kg, ripetibile), o CCP attivato <b>" + nu(Math.round(APCC * s.peso)) + " UI</b> (50 UI/kg, al massimo " + nu(Math.round(APCC_DIE * s.peso)) + " UI al giorno)" + pgs(P27) + ". Nessuno dei due è autorizzato in Italia per questo uso (vedi incoerenze).");
         else h += passo("Se l'idarucizumab non c'è, seconda linea: CCP 25 U/kg o CCP attivato 50 UI/kg (al massimo 200 UI/kg al giorno)" + pgs(P27) + ": serve il peso.");
         bA = ["k4", "idarucizumab"]; bD = ["k4", "5 g"];
@@ -480,13 +480,13 @@ html.js.motore-ko #nomotore{display:block}
         h += '<div class="esito"><span class="big">CCP, prima linea per gli anti-FXa</span></div>';
         h += passo(s.peso !== null ? "<b>CCP " + nu(Math.round(CCP_NOAC * s.peso)) + " U</b> (25 U/kg), ripetibile se serve" + pgs(P27) + ". In Italia il CCP è autorizzato solo per gli AVK (vedi incoerenze)." : "CCP 25 U/kg, ripetibile" + pgs(P27) + ": serve il peso.", true);
         if (s.peso !== null) { bA = ["k4", "CCP"]; bD = ["k4", nu(Math.round(CCP_NOAC * s.peso)) + " U"]; } else bA = ["k4", "CCP"];
-        if (chir) h += passo("<b>Andexanet</b>: non indicato prima di un intervento d'urgenza" + pgs(ST.ondexxya) + "; per la neutralizzazione prima della chirurgia la fonte non dà altro: «—».");
-        else if (anx.esito === "non_indicato") h += passo("<b>Andexanet</b>: non indicato per l'edoxaban" + pgs(ST.ondexxya) + ".");
-        else if (anx.esito === "nessuna") h += passo("<b>Andexanet</b>: " + (anx.manca ? "serve " + anx.manca + " dell'ultima compressa" : "con dose o ora dell'ultima assunzione non note la scheda tecnica <b>non raccomanda una dose</b>") + pgs(ST.ondexxya) + ".");
+        if (chir) h += passo("<b>Andexanet</b>: non indicato prima di un intervento d'urgenza" + pgs(ST.andex) + "; per la neutralizzazione prima della chirurgia la fonte non dà altro: «—».");
+        else if (anx.esito === "non_indicato") h += passo("<b>Andexanet</b>: non indicato per l'edoxaban" + pgs(ST.andex) + ".");
+        else if (anx.esito === "nessuna") h += passo("<b>Andexanet</b>: " + (anx.manca ? "serve " + anx.manca + " dell'ultima compressa" : "con dose o ora dell'ultima assunzione non note la scheda tecnica <b>non raccomanda una dose</b>") + pgs(ST.andex) + ".");
         else {
           var alta = anx.esito === "alta";
-          h += passo("<b>Andexanet, dose " + (alta ? "alta" : "bassa") + "</b> (" + anx.perche + "): <b>" + (alta ? "800" : "400") + " mg in bolo</b> a circa 30 mg/min, poi <b>" + (alta ? "8" : "4") + " mg/min per 120 minuti</b> (" + (alta ? "960" : "480") + " mg); " + (alta ? "9" : "5") + " flaconcini da 200 mg" + pgs(ST.ondexxya) + ". La fonte cita lo schema di 400 + 480 mg studiato" + pgs(P27) + ".", true);
-          h += passo("Prima di una PCI o di una cardiochirurgia: l'andexanet rende refrattari all'eparina" + pgs(ST.ondexxya) + ".");
+          h += passo("<b>Andexanet, dose " + (alta ? "alta" : "bassa") + "</b> (" + anx.perche + "): <b>" + (alta ? "800" : "400") + " mg in bolo</b> a circa 30 mg/min, poi <b>" + (alta ? "8" : "4") + " mg/min per 120 minuti</b> (" + (alta ? "960" : "480") + " mg); " + (alta ? "9" : "5") + " flaconcini da 200 mg" + pgs(ST.andex) + ". La fonte cita lo schema di 400 + 480 mg studiato" + pgs(P27) + ".", true);
+          h += passo("Prima di una PCI o di una cardiochirurgia: l'andexanet rende refrattari all'eparina" + pgs(ST.andex) + ".");
         }
       }
       if (grave || chir) h += passo("Plasma fresco congelato solo con una coagulopatia diluizionale; <b>vitamina K e protamina non servono</b> con i NOAC" + pgs(P27) + ".");
@@ -531,10 +531,10 @@ html.js.motore-ko #nomotore{display:block}
     function inc(tocca, x) { return nota(tocca ? "" : "spenta", (tocca ? "<b>Tocca questo caso.</b> " : "") + x); }
     var anti = s.ac === "apix" || s.ac === "riva" || s.ac === "edox";
     el("outInc").innerHTML =
-      inc((grave || chir) && (anti || s.ac === "dabi"), "<b>CCP con i NOAC.</b> La fonte lo mette in prima linea per gli anti-FXa e in seconda per il dabigatran, a 25 U/kg" + pgs(P27) + "; le schede tecniche italiane del CCP a 4 fattori (Confidex, Cofact, Pronativ) lo autorizzano solo per gli AVK e le carenze congenite" + pgs(ST.confidex) + ". È un uso fuori indicazione.") +
-      inc((grave || chir) && s.ac === "dabi", "<b>CCP attivato.</b> La fonte lo propone a 50 UI/kg" + pgs(P27) + "; FEIBA è autorizzato solo per gli inibitori del fattore VIII e <b>non va usato nella trombosi acuta, infarto compreso</b>, se ci sono alternative" + pgs(ST.feiba) + ".") +
-      inc((grave || chir) && s.ac === "avk", "<b>Fattore VIIa ricombinante.</b> La fonte lo elenca fra gli agenti rapidi con la vitamina K" + pgs(P27) + "; NovoSeven non ha questa indicazione, e fuori indicazione gli eventi tromboembolici arteriosi sono stati 5,6% contro 3,0%" + pgs(ST.novoseven) + ".") +
-      inc(grave && (s.ac === "apix" || s.ac === "riva"), "<b>Andexanet.</b> La fonte cita lo schema 400 + 480 mg studiato e mette il CCP in prima linea" + pgs(P27) + "; la scheda tecnica sceglie fra due dosi secondo farmaco, dose e ora" + pgs(ST.ondexxya) + ". Lo strumento mostra entrambi, nell'ordine della fonte.") +
+      inc((grave || chir) && (anti || s.ac === "dabi"), "<b>CCP con i NOAC.</b> La fonte lo mette in prima linea per gli anti-FXa e in seconda per il dabigatran, a 25 U/kg" + pgs(P27) + "; le tre schede tecniche italiane lette lo autorizzano solo per gli AVK e le carenze congenite" + pgs("CCP a 4 fattori") + ". È un uso fuori indicazione.") +
+      inc((grave || chir) && s.ac === "dabi", "<b>CCP attivato.</b> La fonte lo propone a 50 UI/kg" + pgs(P27) + "; è autorizzato solo per gli inibitori del fattore VIII e <b>non va usato nella trombosi acuta, infarto compreso</b>, se ci sono alternative" + pgs(ST.ccpa) + ".") +
+      inc((grave || chir) && s.ac === "avk", "<b>Fattore VIIa ricombinante.</b> La fonte lo elenca fra gli agenti rapidi con la vitamina K" + pgs(P27) + "; l'eptacog alfa non ha questa indicazione, e fuori indicazione gli eventi tromboembolici arteriosi sono stati 5,6% contro 3,0%" + pgs(ST.eptacog) + ".") +
+      inc(grave && (s.ac === "apix" || s.ac === "riva"), "<b>Andexanet.</b> La fonte cita lo schema 400 + 480 mg studiato e mette il CCP in prima linea" + pgs(P27) + "; la scheda tecnica sceglie fra due dosi secondo farmaco, dose e ora" + pgs(ST.andex) + ". Lo strumento mostra entrambi, nell'ordine della fonte.") +
       inc(false, "<b>Eparine.</b> La sezione del supplementare non tratta la protamina, salvo dire che non serve con i NOAC" + pgs(P27) + ": la dose è tutta della scheda tecnica.") +
       inc(grave && (anti || s.ac === "dabi" || s.ac === "avk"), "<b>Fibrillazione atriale, ESC 2024</b> (scheda 10 del progetto, sezione 7). Uscita dopo questa linea guida, nel sanguinamento pericoloso per la vita o in sede critica mette prima l'<b>antidoto specifico</b> (IIa B) — idarucizumab per il dabigatran, andexanet per gli anti-FXa — e il CCP solo se l'antidoto manca; con l'AVK preferisce il CCP al plasma (IIa C) e non nomina il fattore VIIa. Questo strumento segue la SCA 2023, che per gli anti-FXa mette prima il CCP.");
 
